@@ -1,0 +1,10 @@
+account:
+  username: xxx
+  password: xxx
+
+application:
+  cities_page_url: https://www.lianjia.com/city/
+  cas_initialize: https://clogin.lianjia.com/authentication/initialize
+  cas_authenticate: https://clogin.lianjia.com/authentication/authenticate
+  rsa_encrypt_url: https://tool.jundie.net/rsa2
+  ua_pool: UA.txt

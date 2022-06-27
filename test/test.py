@@ -1,13 +1,25 @@
-import base64
-
-from Crypto.PublicKey import RSA
-from Crypto.Cipher import PKCS1_v1_5 as PKCS1_cipher
+import pymysql
+from utils import Utils
+import datetime
 
 if __name__ == '__main__':
+    conn = pymysql.connect(host='127.0.0.1', port=3306,
+                           user="root",
+                           password="20010910cheng",
+                           db="sh_house")
 
-    public_key = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCCB81pk1Go/d7K8unYqeB6YyQdDgIRsLji7BxlBfMC2U8/0lyOLxJ6sQb1RmKaILuxN0hRci4zWPfkkPhttWaogq3XABYiDYbx0843ge4D79pG21+qWplw43uHZNs0B6iUChJW1O3DDJPXGwj50L1ySTVt7G7iqsIr9PLZVRSZmQIDAQAB"
-    key = "-----BEGIN RSA PUBLIC KEY-----\n" + public_key + "\n-----END RSA PUBLIC KEY-----"
-    cipher = PKCS1_cipher.new(RSA.importKey(key.encode()))
-    pwd = "20010910cheng"
-    encrypt_text = base64.b64encode(cipher.encrypt(pwd.encode("utf-8")))
-    print(encrypt_text.decode('utf-8'))
+    # Utils.add_city(conn, "上海", 0, 0)
+    # print(Utils.get_city_id(conn, "上海"))
+
+    # Utils.update_city(conn, "杭州", onsail=100, deal=200)
+
+    # Utils.add_region(conn, "上海", "浦东", 0, 0)
+    # print(Utils.get_region_id(conn, "浦东"))
+
+    # Utils.update_region(conn, "浦东", onsail=1, deal=2)
+
+    # cid = Utils.get_city_id(conn, "上海")
+    # rid = Utils.get_region_id(conn, "浦东")
+    # Utils.add_info(conn, cid, rid, 1, "房名", "户型", 200, 100000, 100, "20220201")
+
+    # print(Utils.check_city_exist(conn, "济南"))

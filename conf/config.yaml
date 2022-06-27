@@ -2,6 +2,11 @@ account:
   username: 18753103857
   password: 20010910cheng
 
+mysql:
+  username: root
+  password: 20010910cheng
+  dbName: sh_house
+
 application:
   cities_page_url: https://www.lianjia.com/city/
   cas_initialize: https://clogin.lianjia.com/authentication/initialize

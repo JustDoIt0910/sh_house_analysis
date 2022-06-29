@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+<title>二手房价格预测</title>
+<link href="../static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary JavaScript plugins) -->
+<script src="../static/js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+ <link href="../static/css/dashboard.css" rel="stylesheet">
+<link href="../static/css/style.css" rel='stylesheet' type='text/css' />
+<!--//Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Rissner Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</head>
+
+<body>
+<!-- header -->
+<div class="col-md-2 sidebar">
+		 <div class="sidebar_top">
+			 <h1><a href="index.html">PRE<span>DICT</span></a></h1>
+		 </div>
+		<div class="top-navigation">
+				<div class="t-menu">MENU</div>
+
+				<div class="t-img">
+					<img src="../static/images/lines.png" alt="" />
+				</div>
+				<div class="clearfix"> </div>
+		</div>
+		<div class="drop-navigation">
+			 <div class="top-menu">
+				 
+				 <ul>
+                     <li class="active"><a href="/">主页</a></li>
+					 <li><a href="/about">关于</a></li>
+					 <li><a href="/analyse/1/上海/1">数据分析</a></li>
+					 <li><a href="/predict">价格预测</a></li>
+                     <li><a href="/query">信息查询</a></li>
+					 <li><a href="">CONTACT</a></li>
+				 </ul>			 		 
+			 </div>
+			<!-- script-for-menu -->
+							<script>
+								$( ".top-navigation" ).click(function() {
+								$( ".drop-navigation" ).slideToggle( 300, function() {
+								// Animation complete.
+								});
+								});
+							</script>
+			
+			 <div class="side-btm">
+				 <div class="social-icons">
+						<ul>
+							<li><a href="#"><span class="fa"> </span></a></li>
+							<li><a href="#"><span class="tw"> </span></a></li>
+							<li><a href="#"><span class="g"> </span></a></li>
+							<li><a href="#"><span class="in"> </span></a></li>
+						</ul>
+						<div class="clearfix"></div>
+				 </div>
+				<div class="copyright">
+					<p>联系方式：123456789@qq.com<a target="_blank" href=""></a></p>
+				</div>
+			 </div>
+		</div>
+</div>
+
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+	 <div class="side-content">
+	      <div class="banner">
+              <img style="width:1200px; height:500px" src="{{ url_for("static", filename="img/VCG2.jpg") }}" class="img-responsive pic1" alt=""/>
+		  </div>
+	  </div>
+
+	  <div class="side-pics">
+			 <img src="{{ url_for("static", filename="img/pic2.jpg") }}" class="img-responsive pic1" alt=""/>
+			 <img src="{{ url_for("static", filename="img/pic4.jpg") }} " class="img-responsive pic1" alt=""/>
+	 </div>
+		<div class="clearfix"></div>
+	 <!----->
+
+
+	 <div class="welcome">
+		 <div class="welcm-grids">
+			 <div class="welcm-info">
+				 <h3>欢迎使用</h3>
+				 <h4>二手房分析预测系统</h4>
+				 <p>  本项目是对不同等级城市的链家二手房房源数据进行分析，经数据整理后，对下一阶段的二手房房价进行较为精准的预测。我们爬取了五个一线城市二手房成交量和在售量的有关数据，通过得到的数据进行分析和预测，致力于让买方或卖方对价格的选择更加合理。</p>
+			 </div>
+		 </div>
+		 <div class="side-pics">
+			 <img src="{{ url_for("static", filename="img/abt.jpg") }}" class="img-responsive pic1" alt=""/>
+			 <img src="{{ url_for("static", filename="img/bnr3.jpg") }}" class="img-responsive pic1" alt=""/>
+		 </div>
+		  <div class="clearfix"></div>
+	 </div>
+	 <!----->
+	 <div class="services">
+		 <div class="service-sec">
+			  <h3>服务模块</h3>
+			 <div class="service_grids">
+					 <div class="col-md-4 service_grid text-center">
+						 <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+						 <h6><a href="#">DATA ANALYSE</a></h6>
+						 <p>Analyze the data of chain home second -hand houses in different levels of cities.</p>
+					 </div>
+					 <div class="col-md-4 service_grid text-center">
+						 <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+						 <h6><a href="#">DATA PREDICT</a></h6>
+						 <p>Analyze the data of chain home second -hand houses in different levels of cities.</p>
+					 </div>
+					 <div class="col-md-4 service_grid text-center">
+						 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+						 <h6><a href="#">ON SALE</a></h6>
+						 <p>Crazy the chain house in real time through the reptile in the second -hand house data, and then display it on this page for users to inquire..</p>
+					 </div>
+					 <div class="clearfix"></div>
+			 </div>
+		 </div>
+		 <div class="side-pics">
+			 <img src="{{ url_for("static", filename="img/pic3.jpg") }}" class="img-responsive pic1" alt=""/>
+			 <img src="{{ url_for("static", filename="img/pic4.jpg") }}" class="img-responsive pic1" alt=""/>
+		 </div>
+			<div class="clearfix"></div>
+	 </div>
+	 <!---->
+	 <!---->
+
+
+
+
+
+
+
+
+
+
+	 <!---->
+		<!-- footer -->
+		<div class="footer">
+				 <div class="footer-grids">
+					 <div class="col-md-6 ftr-grid1">
+						 <h4>About</h4>
+						 <p>wowowowoow.</p>
+
+					 </div>
+					 <div class="col-md-6 news-ltr">
+						 <h4>Newsletter</h4>
+						 <p>isisii.</p>
+						 <form>
+                             <input type="text" class="text" value="Enter Email" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Enter Email';}">
+							 <input type="submit" value="Subscribe">
+							 <div class="clearfix"></div>
+						 </form>
+					</div>
+					 <div class="clearfix"></div>
+				 </div>
+		</div>
+
+
+</div>
+
+
+
+</div>
+<div class="clearfix"></div>
+<!---->
+
+<!---->
+</body>
+</html>

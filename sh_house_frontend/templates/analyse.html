@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Gallery</title>
+<link href="{{ url_for("static", filename="css/bootstrap.css") }}" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessarJavaScript plugins) -->
+<script src={{ url_for("static", filename="js/jquery.min.js") }}></script>
+<!-- Custom Theme files -->
+ <link href={{ url_for("static", filename="css/dashboard.css") }} rel="stylesheet">
+<link href={{ url_for("static", filename="css/style.css") }} rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href={{ url_for("static", filename="css/lightbox.css") }}>
+<!--//Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Rissner Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</head>
+<body>
+<!-- header -->
+<div class="col-md-2 sidebar">
+		 <div class="sidebar_top">
+			 <h1><a href="index.html">PRE<span>DICT</span></a></h1>
+		 </div>
+		<div class="top-navigation">
+				<div class="t-menu">MENU</div>
+
+				<div class="t-img">
+					<img src="../static/images/lines.png" alt="" />
+				</div>
+				<div class="clearfix"> </div>
+		</div>
+		<div class="drop-navigation">
+			 <div class="top-menu">
+
+				 <ul>
+                     <li class="active"><a href="/">主页</a></li>
+					 <li><a href="/about">关于</a></li>
+					 <li><a href="/analyse/1/上海/1">数据分析</a></li>
+					 <li><a href="/predict">价格预测</a></li>
+                     <li><a href="/query">信息查询</a></li>
+					 <li><a href="">CONTACT</a></li>
+				 </ul>
+			 </div>
+			<!-- script-for-menu -->
+							<script>
+								$( ".top-navigation" ).click(function() {
+								$( ".drop-navigation" ).slideToggle( 300, function() {
+								// Animation complete.
+								});
+								});
+							</script>
+
+			 <div class="side-btm">
+				 <div class="social-icons">
+						<ul>
+							<li><a href="#"><span class="fa"> </span></a></li>
+							<li><a href="#"><span class="tw"> </span></a></li>
+							<li><a href="#"><span class="g"> </span></a></li>
+							<li><a href="#"><span class="in"> </span></a></li>
+						</ul>
+						<div class="clearfix"></div>
+				 </div>
+				<div class="copyright">
+					<p>联系方式：123456789@qq.com<a target="_blank" href=""></a></p>
+				</div>
+			 </div>
+		</div>
+</div>
+
+
+<div class="main-page">
+    <div class="list">
+        <br class="select">
+            <h2 class="inline">图表种类:</h2>
+            <dd style="margin-top: 30px">
+                <a href="{{ "/analyse/1/" + city + "/" + is_deal}}" class="p-type" style="color: #4793a7; font-size: 20px;">城市各区二手房数量</a>&nbsp;
+                <a href="{{ "/analyse/2/" + city + "/" + is_deal}}" class="p-type" style="color: #934a70; font-size: 20px;">地区户型占比</a>&nbsp;
+                <a href="{{ "/analyse/3/" + city + "/" + is_deal}}" class="p-type" style="color: #928d3c; font-size: 20px;">城市各区每平米单价</a>&nbsp;
+                <a href="{{ "/analyse/4/" + city + "/" + is_deal}}" class="p-type" style="color: #47a75f; font-size: 20px;">各城市每平米单价</a>&nbsp;
+                <a href="{{ "/analyse/5/" + city + "/" + is_deal}}" class="p-type" style="color: #162f36; font-size: 20px;">城市在售二手房面积占比</a>&nbsp;
+                <a href="{{ "/analyse/7/" + city + "/" + is_deal}}" class="p-type" style="color: #667b80; font-size: 20px;">城市房价走势</a>
+                <a href="{{ "/analyse/6/" + city + "/" + is_deal}}" class="p-type" style="color: #667b80; font-size: 20px;">房屋朝向和楼层与房价的关系</a>&nbsp;
+            </dd>
+        </dl>
+        <select name="select" id="select" style="margin-top: 20px; height: 50px; width: 240px; line-height: 50px;" onchange="s_click(this)">
+            <option>选择城市</option>
+            {% for city in cityOptions %}
+                <option value={{ "/analyse/" + chart + "/" + city + "/" + is_deal }}>{{ city }}</option>
+            {% endfor %}
+        </select>
+
+        <script type="text/javascript">
+        //select跳页
+        function s_click(obj) {
+            var num = 0;
+            for (var i = 0; i < obj.options.length; i++) {
+                if (obj.options[i].selected == true) {
+                    num++;
+                }
+            }
+            if (num == 1) {
+                var url = obj.options[obj.selectedIndex].value;
+                window.location.href = url
+            }
+        }
+        </script>
+    </div>
+
+    <!--图表区域-->
+    <iframe src="{{ pic_url }}" style="margin-left: 110px; margin-top: 100px" width="1000px" height= "500px" name="topFrame"
+    scrolling="No"  noresize="noresize" frameborder="0" id="topFrame"></iframe>
+
+    <iframe src="{{ pic_url2 }}" style="margin-left: 110px; margin-top: 100px" width="1000px" height= "500px" name="topFrame"
+    scrolling="No"  noresize="noresize" frameborder="0" id="topFrame"></iframe>
+
+    <!--图表区域-->
+
+</div>
+
+</div>
+<div class="clearfix"></div>
+<!---->
+
+<!---->
+</body>
+</html>

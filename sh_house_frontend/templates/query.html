@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Projects</title>
+<link href="../static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary JavaScript plugins) -->
+<script src="../static/js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+ <link href="../static/css/dashboard.css" rel="stylesheet">
+<link href="../static/css/style.css" rel='stylesheet' type='text/css' />
+<!--//Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Rissner Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<!-- start menu -->
+    <style>
+
+    #hor-minimalist-a
+    {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+        font-size: 18px;
+        background: #fff;
+        margin: 45px;
+        width: 1000px;
+        border-collapse: collapse;
+        text-align: left;
+    }
+    #hor-minimalist-a th
+    {
+        font-size: 20px;
+        font-weight: normal;
+        color: #039;
+        padding: 10px 8px;
+        border-bottom: 2px solid #6678b1;
+    }
+    #hor-minimalist-a td
+    {
+        color: #669;
+        padding: 9px 8px 0px 8px;
+    }
+    #hor-minimalist-a tbody tr:hover td
+    {
+        color: #009;
+    }
+
+</style>
+
+</head>
+<body>
+<!-- header -->
+<div class="col-md-2 sidebar">
+		 <div class="sidebar_top">
+			 <h1><a href="index.html">PRE<span>DICT</span></a></h1>
+		 </div>
+		<div class="top-navigation">
+				<div class="t-menu">MENU</div>
+
+				<div class="t-img">
+					<img src="../static/images/lines.png" alt="" />
+				</div>
+				<div class="clearfix"> </div>
+		</div>
+		<div class="drop-navigation">
+			 <div class="top-menu">
+
+                 <ul>
+                     <li class="active"><a href="/">主页</a></li>
+					 <li><a href="/about">关于</a></li>
+					 <li><a href="/analyse/1/上海/1">数据分析</a></li>
+					 <li><a href="/predict">价格预测</a></li>
+                     <li><a href="/query">信息查询</a></li>
+					 <li><a href="">CONTACT</a></li>
+				 </ul>
+			 </div>
+			<!-- script-for-menu -->
+							<script>
+								$( ".top-navigation" ).click(function() {
+								$( ".drop-navigation" ).slideToggle( 300, function() {
+								// Animation complete.
+								});
+								});
+							</script>
+
+			 <div class="side-btm">
+				 <div class="social-icons">
+						<ul>
+							<li><a href="#"><span class="fa"> </span></a></li>
+							<li><a href="#"><span class="tw"> </span></a></li>
+							<li><a href="#"><span class="g"> </span></a></li>
+							<li><a href="#"><span class="in"> </span></a></li>
+						</ul>
+						<div class="clearfix"></div>
+				 </div>
+				<div class="copyright">
+					<p>联系方式：123456789@qq.com<a target="_blank" href=""></a></p>
+				</div>
+			 </div>
+		</div>
+</div>
+
+
+
+<div class="main-page">
+    <div class="pre-list">
+
+        <dl class="select">
+            <h2 style="color: #373739" class="inline">二手房信息查询</h2>
+        </dl>
+
+        <form class="select" action="" method="post">
+
+                <h2 style="color: #373739" class="inline">城市:</h2>
+                <input type="text" value="无" name="city" class="formText">
+
+            <h2 style="color: #373739" class="inline">地区:</h2>
+                <input type="text" value="无" name="region" class="formText">
+
+                <h2 style="color: #373739" class="inline">楼层:</h2>
+                <input type="text" value=0 name="floor" class="formText">
+
+                <h2 style="color: #373739" class="inline">户型:</h2>
+                <select name="type">
+                    <option value="1室0厅">1室0厅</option>
+                    <option value="1室1厅">1室1厅</option>
+                    <option value="2室1厅">2室1厅</option>
+                    <option value="2室2厅">2室2厅</option>
+                    <option value="3室1厅">3室1厅</option>
+                    <option value="3室2厅">3室2厅</option>
+                    <option value="4室2厅">4室2厅</option>
+                    <option value="无" selected>任意</option>
+                </select>
+
+                <h2 style="color: #373739" class="inline">朝向:</h2>
+                <select name="face">
+                    <option value="北">北</option>
+                    <option value="南">南</option>
+                    <option value="西">西</option>
+                    <option value="东">东</option>
+                    <option value="东北">东北</option>
+                    <option value="东南">东南</option>
+                    <option value="西北">西北</option>
+                    <option value="西南">西南</option>
+                    <option value="无" selected>任意</option>
+                </select>
+
+                <select name="isDeal">
+                    <option value=1>成交</option>
+                    <option value=0 selected>在售</option>
+                </select>
+
+            <input style="margin-top: 30px" type="submit" value = "查询" class="summit">
+    </form>
+
+
+    <!--图表区域-->
+        <h3 style="color: #373739" class="inline">{{ title }}</h3>
+        <table id="hor-minimalist-a" summary="Employee Pay Sheet">
+            <thead>
+                <tr>
+                    <th scope="col">名称</th>
+                    <th scope="col">户型</th>
+                    <th scope="col">面积</th>
+                    <th scope="col">总价(万)</th>
+                    <th scope="col">单价(元/平米)</th>
+                    <th scope="col">朝向</th>
+                    <th scope="col">楼层</th>
+                    <th scope="col">成交日期</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in info %}
+                    <tr>
+                        <td>{{ i.name }}</td>
+                        <td>{{ i.type }}</td>
+                        <td>{{ i.area }}</td>
+                        <td>{{ i.totalPrice }}</td>
+                        <td>{{ i.unitPrice }}</td>
+                        <td>{{ i.face }}</td>
+                        <td>{{ i.floor }}</td>
+                        <td>{{ i.dealTime }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+    <!--图表区域-->
+    </div>
+</div>
+
+<div class="clearfix"></div>
+<!---->
+
+<!---->
+</body>
+</html>
